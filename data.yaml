@@ -1,0 +1,6 @@
+train: C:/convert/instance segmantation/train/images
+val: C:/convert/instance segmantation/valid/images
+test: C:/convert/instance segmantation/test/images
+
+nc: 3
+names: ['apple', 'plate', 'rice']
