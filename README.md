@@ -31,10 +31,6 @@ A WPF dashboard client subscribes to the SSE feed, visualizes plate fill percent
 
 3. **Install dependencies:**
    ```bash
-   pip install -r requirements.txt
-   ```
-   > If `requirements.txt` is missing, install manually:
-   ```bash
    pip install ultralytics roboflow opencv-python torch sseclient
    ```
 
