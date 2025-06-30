@@ -80,4 +80,14 @@ A WPF dashboard client subscribes to the SSE feed, visualizes plate fill percent
 
 ---
 
+## 📸 Screenshots
+
+- **Python App Fill Rate**
+<img src="https://github.com/meteahmetyakar/Open-Buffet-Plate-Fill-Rate-Analyzer/blob/main/images/fill-rate-example.png"/>
+
+- **Dashboard Login Page**
+<img src="https://github.com/meteahmetyakar/Open-Buffet-Plate-Fill-Rate-Analyzer/blob/main/images/login-page.png"/>
+
+- **Dashboard Fill Rate**
+<img src="https://github.com/meteahmetyakar/Open-Buffet-Plate-Fill-Rate-Analyzer/blob/main/images/dashboard-example.png"/>
 
