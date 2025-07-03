@@ -1,0 +1,178 @@
+﻿<Window x:Class="FoodTracking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:FoodTracking"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1200">
+    <Border BorderBrush="Gray" BorderThickness="2" Margin="10">
+
+        <Grid x:Name="MainGrid" Background="#FFD9D9D9">
+
+
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="36,28,36,313" Background="#FFF8EAEA"
+                    CornerRadius="20,20,0,0">
+                <!-- Top-left and top-right corners are rounded -->
+
+
+
+                <Grid x:Name="PieCharGrid" Margin="9,9,9,9" Background="#FFF8EAEA">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <!-- Content height will adjust to content -->
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <!-- Content width will adjust to content -->
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Grid content with PieChart from LiveCharts -->
+                    <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart1" Series="{Binding PieSeries1}" Margin="0,0,-6,41" Visibility="Visible"/>
+                            <!-- %25'in altındaki uyarı (Sarı baklava) -->
+
+                            <TextBlock x:Name="PieTitle1" Text="Rice" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Image x:Name="WarningIcon1" Source="/images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Rectangle x:Name="Rectangle1" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="CriticalIcon1" Source="/images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+
+                        </Grid>
+
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart2" Series="{Binding PieSeries2}" Margin="0,0,-6,41" Visibility="Collapsed" />
+
+                            <TextBlock x:Name="PieTitle2" Text="" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Rectangle x:Name="Rectangle2" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="WarningIcon2" Source="/images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Image x:Name="CriticalIcon2" Source="/images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart3" Series="{Binding PieSeries3}" Margin="0,0,-6,41" Visibility="Collapsed" />
+
+                            <TextBlock x:Name="PieTitle3" Text="" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Rectangle x:Name="Rectangle3" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="WarningIcon3" Source="/images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Image x:Name="CriticalIcon3" Source="/images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="3" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart4" Series="{Binding PieSeries4}" Margin="0,0,-6,41" Visibility="Collapsed" />
+
+                            <TextBlock x:Name="PieTitle4" Text="" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Rectangle x:Name="Rectangle4" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="WarningIcon4" Source="/images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Image x:Name="CriticalIcon4" Source="/images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart5" Series="{Binding PieSeries5}" Margin="0,0,-6,41" Visibility="Collapsed" />
+
+                            <TextBlock x:Name="PieTitle5" Text="" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Rectangle x:Name="Rectangle5" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="WarningIcon5" Source="images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Image x:Name="CriticalIcon5" Source="images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart6" Series="{Binding PieSeries6}" Margin="0,0,-6,41" Visibility="Collapsed" />
+
+                            <TextBlock x:Name="PieTitle6" Text="" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Rectangle x:Name="Rectangle6" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="WarningIcon6" Source="images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Image x:Name="CriticalIcon6" Source="images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart7" Series="{Binding PieSeries7}" Margin="0,0,-6,41" Visibility="Collapsed" />
+
+                            <TextBlock x:Name="PieTitle7" Text="" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Rectangle x:Name="Rectangle7" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="WarningIcon7" Source="images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Image x:Name="CriticalIcon7" Source="images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="3" BorderBrush="Gray" BorderThickness="1" Padding="10">
+                        <Grid>
+                            <lvc:PieChart x:Name="PieChart8" Series="{Binding PieSeries8}" Margin="0,0,-6,41" Visibility="Collapsed" />
+
+                            <TextBlock x:Name="PieTitle8" Text="" Margin="0,187,-6,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
+                            <Rectangle x:Name="Rectangle8" HorizontalAlignment="Stretch" Height="228" Stroke="Black" VerticalAlignment="Stretch" Opacity="0.5" Fill="#FFE42121" Visibility="Collapsed"/>
+                            <Image x:Name="WarningIcon8" Source="images/warningIcon.png" Width="40" Height="40"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed" />
+
+                            <!-- %10'un altındaki uyarı (Kırmızı ünlem) -->
+                            <Image x:Name="CriticalIcon8" Source="images/criticalIcon.png" Width="50" Height="50"
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+
+                </Grid>
+            </Border>
+
+            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+                <Slider x:Name="PieChart1Slider" Minimum="0" Maximum="100" Value="100" TickFrequency="10" IsSnapToTickEnabled="True" Width="200" ValueChanged="PieChart1Slider_ValueChanged"/>
+            </StackPanel>
+
+            <DataGrid Name="DataGridTable" FontSize="20" Background="#FFF8EAEA" BorderBrush="Gray"
+              HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray" VerticalContentAlignment="Stretch"
+              HorizontalContentAlignment="Stretch" AutoGenerateColumns="False" Margin="36,579,36,29" IsReadOnly="True" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <!-- Information Sütunu -->
+                    <DataGridTextColumn Header="Information" Binding="{Binding Information}" Width="10*" />
+                    <!-- Time Sütunu -->
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="3*" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
+
+
+    </Border>
+
+
+
+</Window>
